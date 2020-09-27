@@ -309,3 +309,13 @@ TEST(TBitField, bitfields_with_different_bits_are_not_equal)
 
   EXPECT_NE(bf1, bf2);
 }
+
+// my test
+
+TEST(TBitField, can_create_bitfield_with_copy_constructor) 
+{
+    const int size = 4;
+    TBitField bf(size);
+
+    ASSERT_NO_THROW(TBitField copy(bf));
+}
