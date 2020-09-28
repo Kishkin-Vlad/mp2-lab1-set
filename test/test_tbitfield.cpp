@@ -320,3 +320,12 @@ TEST(TBitField, can_create_bitfield_with_copy_constructor)
 
     ASSERT_NO_THROW(TBitField copy(bf));
 }
+
+TEST(TBitField, can_b_assignment_b)
+{
+    TBitField bf(10);
+    TBitField temp = bf;
+
+    ASSERT_NO_THROW(bf = bf;);
+    EXPECT_EQ(temp, bf);
+}
