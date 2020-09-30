@@ -21,7 +21,7 @@ public:
   TSet(const TBitField &bf); // конструктор преобразования типа
   operator TBitField();      // преобразование типа к битовому полю
   // доступ к битам
-  int GetMaxPower() const;     // максимальная мощность множества
+  int GetMaxPower() const;            // максимальная мощность множества
   void InsElem(const int Elem);       // включить элемент в множество
   void DelElem(const int Elem);       // удалить элемент из множества
   int IsMember(const int Elem) const; // проверить наличие элемента в множестве
@@ -39,5 +39,8 @@ public:
   
   friend istream &operator>>(istream &istr, TSet &bf);
   friend ostream &operator<<(ostream &ostr, const TSet &bf);
+
+  // мои функции
+  void finding_the_divisor(int number);
 };
 #endif

@@ -13,6 +13,7 @@
 #ifndef USE_SET // Использовать класс TBitField
 
 #include "tbitfield.h"
+#include "tset.h"
 
 int main()
 {
@@ -49,6 +50,11 @@ int main()
     }
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
+
+  cout << "------------------------------------------------";
+  TSet sample(22);
+  cin >> sample;
+  sample.finding_the_divisor(7);
 }
 #else
 

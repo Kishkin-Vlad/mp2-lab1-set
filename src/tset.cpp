@@ -115,6 +115,16 @@ TSet TSet::operator~(void) // дополнение
     return bf;
 }
 
+void TSet::finding_the_divisor(int number)
+{
+    TSet dividers(MaxPower);
+    for (int i = number; i < MaxPower; i += number)
+        if (IsMember(i))
+            dividers.InsElem(i);
+
+    cout << "dividers: " << dividers;
+}
+
 // перегрузка ввода/вывода
 istream &operator>>(istream &istr, TSet &s) // ввод
 {
@@ -148,7 +158,7 @@ ostream& operator<<(ostream &ostr, const TSet &s) // вывод
         ind++;
         check_len++;
     }
-    for (int i = check_len; i < len; i++)
+    for (int i = check_len + 1; i < len; i++)
         if (s.IsMember(i))
             ostr << "," << i;
     ostr << "}";
