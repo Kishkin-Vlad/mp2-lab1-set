@@ -50,11 +50,6 @@ int main()
     }
   cout << endl;
   cout << "В первых " << n << " числах " << count << " простых" << endl;
-
-  cout << "------------------------------------------------";
-  TSet sample(22);
-  cin >> sample;
-  sample.finding_the_divisor(7);
 }
 #else
 

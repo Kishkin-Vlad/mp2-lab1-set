@@ -41,6 +41,6 @@ public:
   friend ostream &operator<<(ostream &ostr, const TSet &bf);
 
   // мои функции
-  void finding_the_divisor(int number);
+  void findingTheDivisor(int number);
 };
 #endif

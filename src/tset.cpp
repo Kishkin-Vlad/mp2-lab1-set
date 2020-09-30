@@ -115,7 +115,7 @@ TSet TSet::operator~(void) // дополнение
     return bf;
 }
 
-void TSet::finding_the_divisor(int number)
+void TSet::findingTheDivisor(int number)
 {
     TSet dividers(MaxPower);
     for (int i = number; i < MaxPower; i += number)
